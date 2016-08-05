@@ -1,0 +1,87 @@
+
+/*-------------globe-------------*/
+
+body{
+	margin: 0px;
+	background-color: #f1f1f1;
+}
+
+/*-------------nav-------------*/
+
+.nav{
+	background-color: #2A2A2A;
+	width: 10%;
+	height: 100%;
+	position: fixed;
+}
+.nav-bar{
+	list-style: none;
+	padding-left: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.nav-bar > li {
+	display: block;
+	position: relative;
+	float: none;
+	margin-top: 30px;
+	width: 100%;
+}
+.nav-bar > li > a{
+	display: block;
+	position: relative;
+	padding: 10px 15px;
+	border-radius: 10px;
+	text-decoration: none;
+	color: #969696;
+	font-size: 25px;
+}
+.nav-bar-bottom {
+	margin-top: 300px;
+}
+.nav-bar> li > a:hover,
+.nav-bat> li > a:focus{
+	text-decoration: none;
+	color: #fff;
+	background-color:#F49484;
+}
+
+
+
+/*-------------pic-------------*/
+
+.pic{
+	position: fixed;
+	left: 10%;
+	width: 20%;
+	height: 100%;
+	background-image: url("dairy-background.jpg");
+	color: #969696;
+}
+.pic-introduction-title{
+	text-align: center;
+}
+.pic-introduction-mot{
+	text-align: right;
+}
+.pic-dairy{
+	position: relative;
+	margin-top: 500px;
+}
+.pic-dairy-title{
+	text-align: center;
+}
+.pic-dairy-context{
+	text-align: right;
+	margin-right: 20px;
+}
+
+
+/*-------------body-------------*/
+
+.body{
+	position: absolute;
+	left: 30%; 
+	width: 70%;
+	background-color: #f1f1f1;
+}

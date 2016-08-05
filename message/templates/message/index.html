@@ -1,0 +1,38 @@
+{% extends "base/base.html" %}
+{% load mytemplate %}
+{% load staticfiles %}
+{% block specialstatic %}
+<link rel="stylesheet" type="text/css" href="{% static 'message.css' %}">
+{% endblock %}
+
+{% block title %}留言板{% endblock %}
+
+{% block body %}
+
+<form action="add/" method="get" class="ms_form">
+    <legend>给我留言</legend>
+    <input type="text" name="title" class="form_input" placeholder="留下姓名与联系信息" autofocus required><br>
+    <input type="text" name="content" class="form_input" placeholder="你到底想说啥？" required><br> 
+    <input type="submit" name="留言" class="form_btn">
+</form>
+
+
+{% for ms in ms_list %}
+
+<div class="ms_box">
+    <div class="ms_box_title">
+        <h3>{{ ms.ms_title }}</h3>
+    </div>
+    <div class="ms_box_content">
+        <p>{{ ms.ms_content }}</p>
+    </div>
+    <div class="ms_box_time">
+        <h4>{{ ms.ms_pub_date }}</h4>
+    </div>
+    
+</div>
+
+{% endfor %}
+
+{% endblock %}
+

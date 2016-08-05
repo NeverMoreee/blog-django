@@ -1,0 +1,51 @@
+{% extends "base/base.html" %}
+{% load mytemplate %}
+{% load staticfiles %}
+{% block specialstatic %}
+<link rel="stylesheet" type="text/css" href="{% static 'index/index.css' %}">
+{% endblock %}
+
+{% block title %}文章{% endblock %}
+
+{% block body %}
+
+<div class="location">
+    <h1>文章</h1>
+</div>
+
+{% for latest_art in latest_art_list %}
+
+<div class="art_box">
+    <div class="art_box_title">
+        <h1><a data-toggle="tooltip" data-placement="top" title="点击查看全文" 
+        href="{% url 'article:article_id' latest_art.id %}">{{ latest_art.art_title }}</a></h1>
+    </div>
+
+    <div class="art_box_content">
+        <p>{{ latest_art.art_content }}</p>
+    </div>
+
+    <div class="art_box_time">
+        <p>发表于：{{latest_art.art_pub_date}}</p>
+    </div>
+    
+    <div class="art_box_arttype">
+        <h2><a href="{% url 'article:article_type' latest_art.art_type|myurlquote %}">{{ latest_art.art_type }}</a></h2>
+    </div>
+
+
+</div>
+
+{% endfor %}
+
+<div class="type_box">
+
+    {% for art_type in art_type_list %}
+    
+    <li><a href="{% url 'article:article_type' art_type.name|myurlquote %}">{{art_type.name}} ({{art_type.num}})</a></li>
+    
+    {% endfor %}
+    
+</div>
+
+{% endblock %}

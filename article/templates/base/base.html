@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+	<meta charset="utf-8">
+
+	{% load staticfiles %}
+
+	<link rel="stylesheet" type="text/css" href="{% static 'base/monokai.css' %}">
+	<link rel="icon" href="{% static 'base/favicon.ico' %}" mce_href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="{% static 'base/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'base/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'base/jquery.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'base/bootstrap.min.js' %}"></script>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'base/base.css' %}">
+
+	{% block specialstatic %}
+	{% endblock %}
+
+	<!--
+	<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	-->
+
+	<script type="text/javascript">
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+	</script>
+
+	<title>{% block title %}{% endblock %} - NeMosDimension</title>
+
+</head>
+<body>
+
+<!--******************nav*********************-->
+
+<div class="nav">
+	<ul class="nav-bar">
+		<li><a href="{% url 'home' %}"
+		data-toggle="tooltip" 
+		data-placement="right" 
+		data-container="body" 
+		title="主页" >
+		<i class="fa fa-home"></i> 主页</a></li>
+		<li><a href="{% url 'article:index' %}"
+		data-toggle="tooltip" 
+		data-placement="right" 
+		data-container="body" 
+		title="文章" >
+		<i class="fa fa-book"></i> 文章</a></li>
+		<li><a href="{% url 'message:index' %}"
+		data-toggle="tooltip" 
+		data-placement="right" 
+		data-container="body" 
+		title="不来留一发言么？" >
+		<i class="fa fa-pencil"></i> 留言板</a></li>
+	</ul>
+	<ul class="nav-bar nav-bar-bottom">
+		<li><a href="#" 
+		id="sponsor" 
+		data-toggle="tooltip" 
+		data-placement="right" 
+		data-container="body" 
+		data-html=true 
+		title="<h1>请侮辱我吧</h1><img src='{% static 'base/pay.png' %}'>">
+		<i class="fa fa-rmb"></i> 求赞助</a>
+		</li>
+
+		<li><a href="#" 
+		data-toggle="tooltip" 
+		data-placement="right" 
+		data-container="body" 
+		data-html=true 
+		title="
+		<h3>98年生</h3>
+		<h3>目前准大一</h3>
+		<h3>菜鸡进化中</h3>
+		">
+		<i class="fa fa-user "></i> 关于我</a></li>
+
+		<li><a href="https://github.com/NeverMoreee" target="_blank"><i class="fa fa-github"> Github</i></a></li>
+	</ul>
+</div>
+
+<!--******************pic*********************-->
+
+<div class="pic">
+	<div class="pic-introduction">
+		<h1 class="pic-introduction-title">NeMosDimension</h1>
+		<h2 class="pic-introduction-mot">--Keep curious...</h2>
+	</div>
+	<div class="pic-dairy">
+		<h2 class="pic-dairy-title">寄语</h2>
+		<h3 class="pic-dairy-context">菜鸡成长中</h3>
+	</div>
+</div>
+
+<!--******************body*********************-->
+
+<div class="body">
+{% block body %}
+{% endblock %}
+</div>
+
+</body>
+</html>

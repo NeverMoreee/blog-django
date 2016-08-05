@@ -1,0 +1,74 @@
+
+.location{
+    margin-left: 8%;
+    width: 65%;
+    background-color:  #ffffe5;
+    padding:30px;
+    margin-top: 20px;
+}
+.location>h1{
+    font-weight: bolder;
+    text-align: center;
+}
+
+.art_box{
+    margin-top: 80px;
+    margin-left: 8%;
+    margin-bottom: 60px;
+    width: 65%;
+    background-color: #fff;
+    padding: 60px;
+}
+.art_box_title{
+    margin-bottom: 20px;
+}
+.art_box_title>h1{
+    font-weight: bold;
+}
+.art_box_content>p{
+    font-size: 20px;
+    line-height: 180%;
+}
+.art_box_content{
+    max-height: 280px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.art_box_arttype>h2>a:hover{
+    text-decoration: none;
+}
+.art_box_title>h1>a{
+    color: #000;
+}
+.art_box_title>h1>a:hover{
+    text-decoration: none;
+}
+.type_box{
+    background-color: #fff;
+    position: absolute;
+    left: 80%;
+    top:10%;
+    padding: 30px;
+}
+.type_box>li{
+    display: block;
+    margin-bottom: 20px;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px
+}
+.type_box>li>a{
+    text-decoration: none;
+    font-size: 16px;
+}
+.art_box_arttype>h2:before{
+    content: "分类：";
+}
+.art_box_time{
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+.art_box_time>p{
+    font-size: 16px;
+    color: #666;
+
+}

@@ -1,0 +1,31 @@
+{% extends "base/base.html" %}
+{% load mytemplate %}
+{% load staticfiles %}
+{% block specialstatic %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/home.css' %}">
+{% endblock %}
+
+{% block title %}主页{% endblock %}
+
+{% block body %}
+<div class="art_box">
+    <div class="art_box_title">
+        <h1>{{ latest_art.art_title }}</h1>
+    </div>
+
+
+    <div class="art_box_content">
+        <p>{{ latest_art.art_content|mymarkdown }}</p>
+    </div>
+
+    <div class="art_box_time">
+        <p>发表于：{{latest_art.art_pub_date}}</p>
+    </div>
+
+    <div class="art_box_arttype">
+        <h2><a href="{% url 'article:article_type' latest_art.art_type|myurlquote %}">{{ latest_art.art_type }}</a></h2>
+    </div>
+
+
+</div>
+{% endblock %}

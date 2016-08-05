@@ -1,0 +1,34 @@
+{% extends "base/base.html" %}
+{% load mytemplate %}
+{% load staticfiles %}
+{% block specialstatic %}
+<link rel="stylesheet" type="text/css" href="{% static 'article/article_id.css' %}">
+{% endblock %}
+
+{% block title %}{{article.art_title}}{% endblock %}
+
+{% block body %}
+
+
+<div class="art_box">
+    <div class="art_box_title">
+        <h1>{{ article.art_title }}</h1>
+    </div>
+
+    <div class="art_box_content">
+        <p>{{ article.art_content|mymarkdown }}</p>
+    </div>
+
+    <div class="art_box_time">
+        <p>发表于：{{latest_art.art_pub_date}}</p>
+    </div>
+    
+    <div class="art_box_arttype">
+        <h2><a href="{% url 'article:article_type' article.art_type|myurlquote %}">
+        {{ article.art_type }}</a></h2>
+    </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,37 @@
+
+.art_box{
+    margin-top: 80px;
+    margin-left: 8%;
+    margin-bottom: 60px;
+    width: 65%;
+    background-color: #fff;
+    padding: 60px;
+}
+.art_box_title{
+    margin-bottom: 20px;
+}
+.art_box_title>h1{
+    font-weight: bold;
+}
+.art_box_content>p{
+    font-size: 20px;
+    line-height: 180%;
+}
+.art_box_content{
+    margin-top: 30px;
+}
+.art_box_arttype>h2>a:hover{
+    text-decoration: none;
+}
+.art_box_arttype>h2:before{
+    content: "分类：";
+}
+.art_box_time{
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+.art_box_time>p{
+    font-size: 16px;
+    color: #666;
+
+}

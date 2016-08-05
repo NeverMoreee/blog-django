@@ -1,0 +1,62 @@
+.ms_form{
+    background-color: #fff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 15%;
+    width: 60%;
+    padding: 10px;
+    border:1px solid #ccc;
+    border-radius: 12px;
+}
+.ms_form>legend{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.form_input{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    border:1px solid #ccc;
+    border-radius: 4px;
+}
+.form_btn{
+    display: block;
+    padding: 12px 24px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #4CA7F0;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+
+.ms_box{
+    background-color: #fff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 15%;
+    width: 60%;
+    padding: 40px;
+}
+.ms_box_title>h3{
+    margin-top: 0;
+    text-align: center;
+
+}
+.ms_box_content{
+    border-radius: 8px;
+    border:1px solid #ccc;
+    background-color: #eee;
+}
+.ms_box_content>p{
+    margin: 20px 30px 20px 30px;
+    font-size: 20px;
+}
+.ms_box_time>h4{
+    text-align: right;
+}
+.ms_box_time>h4:before{
+    content: "发表时间：";
+}
